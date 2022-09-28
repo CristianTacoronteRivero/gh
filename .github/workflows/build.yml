@@ -9,3 +9,4 @@ jobs:
         with:
           python-version: '3.10'
       - uses: snok/install-poetry@v1.3.1
+      - run: poetry building
