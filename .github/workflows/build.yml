@@ -1,0 +1,10 @@
+name: Building
+on: [push] # se va a ejecutar cuando se haga un push
+jobs:
+  building: # nombre de la ejec
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3 # descargo un repositorio con este comando existente @v3 es la version de la accion
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
