@@ -10,4 +10,8 @@ jobs:
           python-version: '3.10'
       - uses: snok/install-poetry@v1.3.1
       - run: poetry build
-      - run: ls ${{ github.workspace }}
+      # - run: ls ${{ github.workspace }} # para ver si esta el build creado
+      - name: Publish to GH Releases
+        uses: softprops/action-gh-release@v1
+        with: # para usar parametros se usa esta linea
+          files:  ${{ github.workspace }}/dist/* #|  la barra vertical para enumerar varias cosas
