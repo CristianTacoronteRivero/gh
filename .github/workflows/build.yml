@@ -1,5 +1,10 @@
 name: Building
-on: [push] # se va a ejecutar cuando se haga un push
+# on: [push] # se va a ejecutar cuando se haga un push
+on: # en vez de hacer el if, con esto es que se ejecuta solo cuando haya una etiqueta con un tag que empiece con v
+  push:
+    tags:
+      - "v*.*.*"
+
 jobs:
   building: # nombre de la ejec
     runs-on: ubuntu-latest
@@ -15,4 +20,3 @@ jobs:
         uses: softprops/action-gh-release@v1
         with: # para usar parametros se usa esta linea
           files:  ${{ github.workspace }}/dist/* #|  la barra vertical para enumerar varias cosas
-          
