@@ -1,9 +1,8 @@
 name: Building
-# on: [push] # se va a ejecutar cuando se haga un push
-on: # en vez de hacer el if, con esto es que se ejecuta solo cuando haya una etiqueta con un tag que empiece con v
+on:
   push:
     tags:
-      - "v*"
+      - "v*.*.*"
 
 jobs:
   building: # nombre de la ejec
