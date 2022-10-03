@@ -3,7 +3,7 @@ name: Building
 on: # en vez de hacer el if, con esto es que se ejecuta solo cuando haya una etiqueta con un tag que empiece con v
   push:
     tags:
-      - "v*.*.*"
+      - "v*"
 
 jobs:
   building: # nombre de la ejec
