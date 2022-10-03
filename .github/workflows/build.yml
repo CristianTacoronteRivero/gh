@@ -15,3 +15,5 @@ jobs:
         uses: softprops/action-gh-release@v1
         with: # para usar parametros se usa esta linea
           files:  ${{ github.workspace }}/dist/* #|  la barra vertical para enumerar varias cosas
+          name: nombre
+          tag_name: etiqueta
