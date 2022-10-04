@@ -17,6 +17,8 @@ Si quiero añadir imagenes, tablas, etc busco la documentacion de sphinx
    :maxdepth: 2
    :caption: Contents:
 
+   install
+   example_margarita
 
 
 Indices and tables
