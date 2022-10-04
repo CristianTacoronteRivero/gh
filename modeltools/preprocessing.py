@@ -6,7 +6,7 @@ import numpy as np
 
 def get_numerical_feature(df):
     """Devuelve una lista con el nombre de las columnas
-    de tipo numerico
+    de tipo numerico!
 
     Args:
         df (DataFrame): Objeto DataFrame
