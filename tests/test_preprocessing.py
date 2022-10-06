@@ -72,3 +72,6 @@ def test_get_numerical_feature_columns_withoutname():
     df = pd.DataFrame([
         [1, "a"]
     ])
+
+def test_fallo():
+    assert 1 == 0
