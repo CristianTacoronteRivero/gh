@@ -1,10 +1,5 @@
 name: Building
 on: [push]
-# on:
-  # push:
-  #   tags:
-  #     - "v*"
-
 jobs:
   building: # nombre de la ejec
     runs-on: ubuntu-latest
@@ -18,11 +13,10 @@ jobs:
         run: poetry install
       - name: Testing
         run: poetry run pytest --junitxml=jest-junit.xml
-        uses: dorny/test-reporter@v1
       - run: poetry build
       # - run: ls ${{ github.workspace }} # para ver si esta el build creado
-      if: startsWith(github.ref, 'refs/tags/v')
-        - name: Publish to GH Releases
-          uses: softprops/action-gh-release@v1
-          with: # para usar parametros se usa esta linea
-            files:  ${{ github.workspace }}/dist/* #|  la barra vertical para enumerar varias cosas
+      - name: Publish to GH Releases
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v1
+        with: # para usar parametros se usa esta linea
+          files:  ${{ github.workspace }}/dist/* #|  la barra vertical para enumerar varias cosas
