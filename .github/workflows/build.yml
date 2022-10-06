@@ -12,7 +12,7 @@ jobs:
       - name: Install dependecy
         run: poetry install
       - name: Testing
-        run: poetry run pytest --junitxml=jest-junit.xml
+        run: poetry run pytest --junitxml=jest-junit.xml --cov=modeltools --cov-report=html
       - run: poetry build
       # - run: ls ${{ github.workspace }} # para ver si esta el build creado
       - name: Test Report
