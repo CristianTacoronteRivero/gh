@@ -25,3 +25,11 @@ language = 'es'
 
 html_theme = 'alabaster'
 html_static_path = ['_static']
+
+extensions = [
+    'sphinx.ext.autodoc',
+    'autoapi.extension'
+]
+
+autoapi_type = 'python'
+autoapi_dirs = ['../../modeltools'] #../.. porque retrocedo dos directorios! asi pillo la carpeta modeltools
