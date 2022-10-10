@@ -1,0 +1,11 @@
+{
+    "python.testing.pytestArgs": [
+        "."
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.formatting.provider": "black",
+    "editor.formatOnSave": false,
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true
+}
